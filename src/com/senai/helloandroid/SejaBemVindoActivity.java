@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SejaBemVindoActivity extends Activity {
@@ -30,13 +31,22 @@ public class SejaBemVindoActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
+		if (id == R.id.item_voltar) {
+			abreTelaInicial();
+		}else if (id == R.id.item_trocar_imagem) {
+			trocarImagem();
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	private void trocarImagem() {
+		ImageView imageView = (ImageView)findViewById(R.id.im_smile);
+		imageView.setImageResource(R.drawable.smile2);
+	}
+
+	private void abreTelaInicial() {
+		Intent intent = new Intent(this, OlaActivity.class);
+		startActivity(intent);
 	}
 }

@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context="com.senai.helloandroid.SejaBemVindoActivity" >
 
+    <ImageView
+        android:id="@+id/im_smile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/smile" />
+
     <TextView
         android:id="@+id/tv_boas_vindas"
         android:layout_width="match_parent"
